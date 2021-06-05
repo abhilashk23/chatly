@@ -1,0 +1,194 @@
+.chatbox {
+    background: rgb(30, 144, 255, 0.2);
+    display: flex;
+    border-radius: 1.5rem;
+    flex-direction: column;
+    flex: 1;
+}
+
+.notfound {
+    margin: auto;
+    text-align: center;
+}
+
+.chat__header {
+    display: flex;
+    align-items: center;
+    padding: 1rem;
+}
+
+.openSidebar {
+    cursor: pointer;
+}
+
+.chat__header img {
+    height: 2.5rem;
+    width: 2.5rem;
+    border-radius: 99px;
+    margin-right: 1rem;
+    background-color: var(--yellow);
+    box-shadow: 0 0 0 2px var(--gray), 0 0 0 4px var(--blue);
+}
+
+.chat__header h2 {
+    font-size: 1.15rem;
+}
+
+.chat__options {
+    margin-left: auto;
+    position: relative;
+    z-index: 3;
+}
+
+.chat__options button {
+    cursor: pointer;
+}
+
+.chat__buttons {
+    position: absolute;
+    right: 0;
+    top: 100%;
+    background: var(--white);
+    margin-top: 0.5rem;
+    padding: 0.5rem;
+    border-radius: 1rem;
+    box-shadow: 0 0.5rem 1rem #19243A20;
+    max-width: 360px;
+}
+
+.chat__buttons button {
+    border: none;
+    background: var(--white);
+    white-space: nowrap;
+    padding: 0.5rem 1rem;
+    border-radius: 1rem;
+    color: var(--blue);
+    font-size: 0.85rem;
+    cursor: pointer;
+}
+
+.chat__buttons button.red {
+    color: var(--red);
+}
+
+.chat__buttons span {
+    padding: 0.5rem;
+    display: block;
+    white-space: nowrap;
+    font-size: 0.9rem;
+}
+
+.chat__buttons span.error {
+    white-space: unset;
+    font-size: 0.85rem;
+    width: 300px;
+}
+
+.chat__options>button {
+    border: none;
+    background: var(--white);
+    height: 2rem;
+    width: 2rem;
+    padding: 0.5rem;
+    border-radius: 99px;
+    color: #19243A;
+}
+
+.chat__input {
+    margin: 0.5rem;
+    padding: 0.5rem;
+    background: var(--white);
+    width: calc(100% - 1rem);
+    height: 3.5rem;
+    border-radius: 99px;
+    display: flex;
+}
+
+.chat__input .addImg {
+    width: 2.5rem;
+    padding: 0.5rem;
+    position: relative;
+    background: var(--gray);
+    border-radius: 99px;
+    transition: all 0.2s;
+    border: none;
+    cursor: pointer;
+}
+
+.chat__input .addImg.green {
+    background: var(--green);
+}
+
+.chat__input .addImg svg {
+    width: 1.5rem;
+    color: #19243A88;
+    opacity: 0.75;
+    transition: all 0.2s;
+}
+
+.chat__input .addImg:hover svg {
+    opacity: 1;
+    color: #19243A;
+}
+
+.chat__input .addImg.green svg {
+    color: var(--white) !important;
+}
+
+.chat__input input {
+    flex: 0.8;
+    border-radius: 99px;
+    border: none;
+    margin: 0 0.5rem;
+    padding: 0 1rem;
+    font-size: 1rem;
+    font-family: Poppins;
+    color: #19243A;
+    transition: all 0.2s;
+    background-color: transparent;
+}
+
+.chat__input .submit {
+    border: none;
+    background: var(--blue);
+    flex: 0.2;
+    font-size: 1rem;
+    color: var(--white);
+    border-radius: 99px;
+    font-family: Poppins;
+    display: grid;
+    place-items: center;
+    cursor: pointer;
+}
+
+.chat__input .submit svg {
+    height: 1.5rem;
+    display: none;
+}
+
+.chat__messages {
+    flex: 1;
+    overflow-y: scroll;
+    overflow-x: hidden;
+    padding: 0.5rem 1rem;
+    padding-bottom: 1rem;
+    display: flex;
+    flex-direction: column;
+    -webkit-mask-image: linear-gradient(to bottom, transparent, black 1.5rem, black 100%);
+}
+
+@media screen and (max-width:1200px) {
+    .chat__input .submit span {
+        font-size: 0.7rem;
+    }
+}
+
+@media screen and (max-width:600px) {
+    .chatbox {
+        border-radius: 0;
+    }
+    .chat__input .submit svg {
+        height: 1.5rem;
+        display: block;
+    }
+}
