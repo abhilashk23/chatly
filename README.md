@@ -1,7 +1,7 @@
 # Chatly
 
 Click the link for demo
-https://chatly.netlify.app/
+https://chatly-chatapp.netlify.app
 
 
 
