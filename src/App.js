@@ -33,7 +33,7 @@ function App() {
 					type: "SET_USER",
 					user: null,
 				});
-				document.title = 'Login to continue...';
+				document.title = 'Chatly';
 			};
 		})
 	}, []);
